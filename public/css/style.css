@@ -7,13 +7,13 @@
     flex: 1;
 }
 
-footer  marquee{
+footer marquee {
     color: white;
     background-color: black;
     padding: 1.1rem;
 }
 
-footer > div {
+footer>div {
     padding: 1.1rem;
 }
 
@@ -32,7 +32,8 @@ footer .link-footer a:first-child {
     border-left: none;
 }
 
-th, td {
+th,
+td {
     border: 1px solid black;
     padding: 0.5rem 1.05rem;
     text-align: center;
@@ -76,23 +77,74 @@ header {
 header h1 {
     text-transform: uppercase;
     text-align: center;
-}
-
-.index header {
     border-bottom: 2px solid black;
+    width: 100%;
 }
 
 main {
     padding: 1.5rem;
 }
 
-main .txt {}
-
 main #upper {
     text-transform: uppercase;
 }
 
-@media  screen and (max-width: 768px) {
+.order-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.order-form form {
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.form-group label {
+    width: 160px;
+    flex-shrink: 0;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"] {
+    flex: 1;
+    padding: 8px 12px;
+}
+
+.form-group.textarea-group {
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.form-group.textarea-group textarea {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 8px 12px;
+    resize: vertical;
+}
+
+.order-form input[type="submit"] {
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.red {
+    color: red;
+    margin-right: 4px;
+}
+
+@media screen and (max-width: 768px) {
     footer .link-footer {
         flex-direction: column;
         gap: 0.5rem;
@@ -102,5 +154,29 @@ main #upper {
         border: none;
         padding: 0;
     }
-    
+
+    .order-form {
+        padding: 10px;
+    }
+
+    .form-group {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+    }
+
+    .form-group label {
+        width: 100%;
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="email"] {
+        width: 100%;
+    }
+
+    /* Make submit button full width for easier tapping */
+    .order-form input[type="submit"] {
+        width: 100%;
+        padding: 12px;
+    }
 }
