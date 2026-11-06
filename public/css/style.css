@@ -232,6 +232,21 @@ p {
     color: #666;
 }
 
+.success-banner {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 9999;
+    background: #28a745;
+    color: #ffffff;
+    padding: 12px 20px;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    font-size: 14px;
+    font-weight: 500;
+    max-width: 350px;
+}
+
 @media screen and (max-width: 768px) {
     footer .link-footer {
         flex-direction: column;
