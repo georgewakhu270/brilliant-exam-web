@@ -144,6 +144,17 @@ main #upper {
     margin-right: 4px;
 }
 
+.contact-div > div {
+    display: flex;
+    gap: 1rem;
+    margin: 1rem;
+}
+
+.contact-div > div > div:first-child {
+    min-width: 80px;
+    max-width: 85px;
+}
+
 @media screen and (max-width: 768px) {
     footer .link-footer {
         flex-direction: column;
