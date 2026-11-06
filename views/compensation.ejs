@@ -1,28 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/css/style.css">
 </head>
-<body>
-    <header></header>
+
+<body class="compensation">
+    <div>
+        <h1>customer reward portal</h1>
+        <p class="subtitle">Have you paid for a service but never received it? Submit your transaction for review.</p>
+        <div class="reward">
+            <h3>Customer Compensation Programme</h3>
+            <p>Eligible customers may qualify for a refund or compensation.</p>
+        </div>
+        <form action="">
+            <label for="fullname">Full Name</label>
+            <input type="text" name="fullname" placeholder="Enter your full name" required>
+            <label for="phonenumber">Phone Number</label>
+            <input type="tel" name="phonenumber" id="" placeholder="Enter your phone number" required>
+            <label for="transaction">Transaction ID</label>
+            <input type="text" name="transaction" placeholder="Enter transaction reference" required>
+            <label for="amount">Amount Paid (KSh)</label>
+            <input type="number" name="amount" placeholder="Enter amount paid" required>
+            <label for="service">Service Paid For</label>
+            <input type="text" name="service" placeholder="Enter the service name" required>
+            <label for="date">Payment Date</label>
+            <input type="date" name="date" required>
+            <label for="description">What Happened?</label>
+            <textarea name="description" rows="4" placeholder="Explain the service you paid for but did not receive..."required></textarea>
+            <label for="resolution">Preferred Resolution</label>
+            <select name="resolution" required>
+                <option value="">Select an option</option>
+                <option>Full Refund</option>
+                <option>Replacement Service</option>
+                <option>Compensation (if eligible)</option>
+            </select>
+
+            <button type="submit">SUBMIT CLAIM</button>
+        </form>
+        <p class="notice">Your transation details will be reviewed. Submission guarantee compensation. Never share your PIN, password or OTP.</p>
+        <div>
+            <a href="/">HOME</a>
+        </div>
+    </div>
+    <!-- <header></header>
     <main class="content"></main>
     <footer>
-        <div>
-            <div class="link-footer">
+        <div> -->
+    <!-- <div class="link-footer">
                 <a href="/">HOME</a>
                 <a href="/order">ORDER</a>
                 <a href="/contact">CONTACT</a>
                 <a href="/compensation">COMPENSATION</a>
             </div>
-        </div>
+        </div> -->
 
-        <marquee direction="left">
+    <!-- <marquee direction="left">
             The Brilliant Printers is a company that started long time ago and is ready to serve everybody It listens to
             everybody. Contact us on zawadisindani@gmail.com or you can call us on 0704759872
         </marquee>
-    </footer>
+    </footer> -->
 </body>
+
 </html>
