@@ -34,4 +34,9 @@ const insertOrder = db.prepare(`
     VALUES (?, ?, ?, ?, ?)
 `);
 
-module.exports = { db, insertOrder };
+const insertCompensation = db.prepare(`
+    INSERT INTO compensation (fullname, phonenumber, transaction_code, amount, service, date, description, resolution)
+    VALUES (?, ?, ?, ?, ?, ?, ?, ?)
+`);
+
+module.exports = { db, insertOrder, insertCompensation };

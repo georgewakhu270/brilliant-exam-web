@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const { db, insertOrder } = require('./database');
+const { db, insertOrder, insertCompensation } = require('./database');
 
 router.get('/', (req, res) => {
     res.render('index');
@@ -15,13 +15,21 @@ router.get('/order', (req, res) => {
 router.post('/order', (req, res) => {
     const { school, county, village, email, message } = req.body;
     insertOrder.run(school, county, village, email, message);
-
     req.session.success = true;
     res.redirect('/order');
 });
 
 router.get('/compensation', (req, res) => {
-    res.render('compensation');
+    const success = req.session.success;
+    delete req.session.success;
+    res.render('compensation', { success });
+});
+
+router.post('/compensation', (req, res) => {
+    const { fullname, phonenumber, transaction, amount, service, date, description, resolution } = req.body;
+    insertCompensation.run(fullname, phonenumber, transaction, amount, service, date, description, resolution); 
+    req.session.success = true;  
+    res.redirect('/compensation')
 });
 
 router.get('/contact', (req, res) => {

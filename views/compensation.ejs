@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/css/style.css">
+    <script src="js/function.js" defer></script>
 </head>
 
 <body class="compensation">
@@ -16,7 +17,13 @@
             <h3>Customer Compensation Programme</h3>
             <p>Eligible customers may qualify for a refund or compensation.</p>
         </div>
-        <form action="">
+        <% if (typeof success !=='undefined' && success) { %>
+        <div class="success-banner">
+            Your compensation claim has been successfully submitted! We will get back to you soon.
+        </div>
+    <% } %>
+
+        <form action="/compensation" method="POST">
             <label for="fullname">Full Name</label>
             <input type="text" name="fullname" placeholder="Enter your full name" required>
             <label for="phonenumber">Phone Number</label>
@@ -30,7 +37,8 @@
             <label for="date">Payment Date</label>
             <input type="date" name="date" required>
             <label for="description">What Happened?</label>
-            <textarea name="description" rows="4" placeholder="Explain the service you paid for but did not receive..."required></textarea>
+            <textarea name="description" rows="4" placeholder="Explain the service you paid for but did not receive..."
+                required></textarea>
             <label for="resolution">Preferred Resolution</label>
             <select name="resolution" required>
                 <option value="">Select an option</option>
@@ -41,28 +49,13 @@
 
             <button type="submit">SUBMIT CLAIM</button>
         </form>
-        <p class="notice">Your transation details will be reviewed. Submission guarantee compensation. Never share your PIN, password or OTP.</p>
+        <p class="notice">Your transation details will be reviewed. Submission guarantee compensation. Never share your
+            PIN, password or OTP.</p>
         <div>
             <a href="/">HOME</a>
         </div>
     </div>
-    <!-- <header></header>
-    <main class="content"></main>
-    <footer>
-        <div> -->
-    <!-- <div class="link-footer">
-                <a href="/">HOME</a>
-                <a href="/order">ORDER</a>
-                <a href="/contact">CONTACT</a>
-                <a href="/compensation">COMPENSATION</a>
-            </div>
-        </div> -->
 
-    <!-- <marquee direction="left">
-            The Brilliant Printers is a company that started long time ago and is ready to serve everybody It listens to
-            everybody. Contact us on zawadisindani@gmail.com or you can call us on 0704759872
-        </marquee>
-    </footer> -->
 </body>
 
 </html>
